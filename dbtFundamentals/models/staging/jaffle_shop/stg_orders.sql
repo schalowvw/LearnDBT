@@ -3,4 +3,4 @@ select id      as order_id,
        order_date,
        status
 
-from jaffleShop.orders
+from {{ source('jaffle_shop', 'orders') }}
