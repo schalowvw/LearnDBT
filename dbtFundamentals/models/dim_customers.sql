@@ -1,30 +1,15 @@
 {{
     config(
-        materialized='view'
+        materialized='table'
     )
 }}
 
 with customers as (
-
-    select
-        id as customer_id,
-        first_name,
-        last_name
-
-    from jaffleShop.customers
-
+    select * from {{ ref ('stg_customers')}}
 ),
 
 orders as (
-
-    select
-        id as order_id,
-        user_id as customer_id,
-        order_date,
-        status
-
-    from jaffleShop.orders
-
+    select * from {{ ref ('stg_orders')}}
 ),
 
 customer_orders as (
@@ -58,4 +43,5 @@ final as (
 
 )
 
-select * from final
+select *
+from final
