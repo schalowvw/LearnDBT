@@ -16,7 +16,6 @@ customer_orders as (
         count(order_id) as number_of_orders
 
     from orders
-
     group by 1
 
 ),
@@ -31,8 +30,8 @@ final as (
         customer_orders.most_recent_order_date,
         coalesce(customer_orders.number_of_orders, 0) as number_of_orders
 
-    from customers
 
+    from customers
     left join customer_orders using (customer_id)
 
 )
