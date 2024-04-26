@@ -1,0 +1,6 @@
+dbtFundamentals:
+  target: jaffleShop
+  outputs:
+    jaffleShop:
+      type: duckdb
+      path: './jaffleShop.duckdb'
