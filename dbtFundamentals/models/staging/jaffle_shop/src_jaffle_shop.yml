@@ -4,6 +4,12 @@ sources:
   - name: jaffle_shop
     database: jaffleShop
     schema: main
+    freshness:
+      warn_after: { count: 1, period: minute }
+      error_after: { count: 2, period: minute }
+    loaded_at_field: _etl_loaded_at
+
     tables:
       - name: customers
+        freshness: null
       - name: orders
