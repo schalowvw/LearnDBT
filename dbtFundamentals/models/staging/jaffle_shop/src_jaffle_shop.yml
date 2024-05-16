@@ -6,8 +6,8 @@ sources:
     database: jaffleShop
     schema: main
     freshness:
-      warn_after: { count: 1, period: minute }
-      error_after: { count: 2, period: minute }
+      warn_after: { count: 1, period: hour }
+      error_after: { count: 24, period: hour }
     loaded_at_field: _etl_loaded_at
 
     tables:
