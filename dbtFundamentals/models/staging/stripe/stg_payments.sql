@@ -3,4 +3,4 @@ select id as payment_id,
        payment_method,
        amount / 100 as amount
 
-from jaffleShop.payments
+from {{ source('jaffle_shop', 'payments') }}
