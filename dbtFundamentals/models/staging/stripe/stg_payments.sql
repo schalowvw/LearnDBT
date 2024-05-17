@@ -1,6 +1,6 @@
 select id as payment_id,
        order_id,
        payment_method,
-       amount / 100 as amount
+       {{ cents_to_dollars('amount') }} as amount
 
 from {{ source('jaffle_shop', 'payments') }}
