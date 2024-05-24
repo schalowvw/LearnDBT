@@ -5,4 +5,4 @@ select id      as order_id,
 
 from {{ source('jaffle_shop', 'orders') }}
 
-{{ limit_data_in_target('unset', 'order_date') }}
+{{ limit_data_in_target(target_name = 'unset', column_name = 'order_date') }}
