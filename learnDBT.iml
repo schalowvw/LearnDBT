@@ -6,7 +6,7 @@
       <excludeFolder url="file://$MODULE_DIR$/dbtFundamentals/dbt_packages" />
       <excludeFolder url="file://$MODULE_DIR$/dbtFundamentals/target" />
     </content>
-    <orderEntry type="jdk" jdkName="Pipenv (learnDBT)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Pipenv (LearnDBT)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
